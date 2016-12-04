@@ -99,7 +99,7 @@ int main(int argc, char **argv) {
 	
 	while((r = recv(sock, buffer, BUFSIZ, 0)) > 0) {
 		//"\r\n\r\n"
-		fwrite(buffer, (int)r, 1, stdout);
+		fwrite(buffer, r, 1, stdout);
 	}
 	
 	free(buffer);
